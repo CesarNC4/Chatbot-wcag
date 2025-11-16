@@ -1,34 +1,66 @@
 version: "3.1"
 
+# Configuración de la sesión
+config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+# 1. INTENCIONES
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - consultar_criterio  # Para CU-2
+  - obtener_guia        # Para CU-3
+  - validar_codigo      # Para CU-4
+  - consultar_glosario  # Para CU-5
+  - navegar_principios  # Para CU-1
+  - bot_challenge       # (Estándar de Rasa)
 
+# 2. ENTIDADES
+entities:
+  - criterio_id
+
+# 3. RESPUESTAS (A la espera...)
+# Placeholders de texto y botones.
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+    - text: "¡Hola! Soy tu asistente de accesibilidad WCAG 2.1. ¿En qué te ayudo?"
+      buttons:
+        - title: "Navegar por Principios 🧭"
+          payload: "/navegar_principios"
+        - title: "Validar mi código 🔍"
+          payload: "/validar_codigo"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "¡Adiós! Sigue programando de forma accesible."
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "Soy un bot, creado para ayudarte a aplicar el estándar WCAG 2.1."
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  # Respuestas para CU-1: Navegar
+  utter_ask_principle:
+    - text: "El estándar WCAG se basa en 4 principios. ¿Cuál quieres explorar?"
+      buttons:
+        - title: "1. Perceptible"
+          payload: '/consultar_criterio{"criterio_id": "principio_1"}'
+        - title: "2. Operable"
+          payload: '/consultar_criterio{"criterio_id": "principio_2"}'
+        - title: "3. Comprensible"
+          payload: '/consultar_criterio{"criterio_id": "principio_3"}'
+        - title: "4. Robusto"
+          payload: '/consultar_criterio{"criterio_id": "principio_4"}'
+
+  # Respuestas para CU-4: Validar
+  utter_ask_validation:
+    - text: "¡Perfecto! Pega tu fragmento de HTML aquí. Haré una revisión rápida buscando errores comunes de Nivel A."
+
+  # Respuesta por defecto
+  utter_default:
+    - text: "Lo siento, no entendí eso. ¿Puedes reformularlo? Puedes usar los botones para guiarte."
+
+# 4. ACCIONES 
+actions:
+  - action_validate_code
+
+  # Es la acción que conectará con el JSON (Nohelia). Se encargará de buscar el criterio, guía o glosario.
+  - action_get_content

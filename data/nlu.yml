@@ -1,91 +1,70 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  # Intención para saludar
+  - intent: greet
+    examples: |
+      - hola
+      - buenos dias
+      - hey
+      - buenas tardes
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  # Intención para despedirse
+  - intent: goodbye
+    examples: |
+      - adios
+      - chao
+      - hasta luego
+      - bye
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  # Intención para el CU-2: Consultar un criterio
+  - intent: consultar_criterio
+    examples: |
+      - háblame del criterio [1.1.1](criterio_id)
+      - qué es el criterio [1.2.3](criterio_id)
+      - [texto alternativo](criterio_id)
+      - dime sobre [2.1.1](criterio_id)
+      - qué es [1.3.1](criterio_id)
+      - [información y relaciones](criterio_id)
+      - consultar criterio [1.1.1](criterio_id)
+      - qué es [contenido multimedia](criterio_id)
+      - [2.2.1](criterio_id)
+      - [navegación predecible](criterio_id)
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  # Intención para el CU-3: Pedir la guía/ejemplos
+  - intent: obtener_guia
+    examples: |
+      - dame una guía completa
+      - quiero ejemplos
+      - cómo implemento esto
+      - enséñame un ejemplo visual
+      - dame las mejores prácticas
+      - guía paso a paso
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  # Intención para el CU-4: Validar código
+  - intent: validar_codigo
+    examples: |
+      - valida mi código
+      - revisa este html
+      - puedes analizar esto
+      - /validar
+      - validar fragmento
+      - mi código está bien?
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  # Intención para el CU-5: Consultar glosario
+  - intent: consultar_glosario
+    examples: |
+      - qué es ARIA
+      - qué significa semántico
+      - definición de cambio de contexto
+      - qué es WAI-ARIA
+      - glosario
+      - define ARIA
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  # Intención para el CU-1: Navegar
+  - intent: navegar_principios
+    examples: |
+      - quiero navegar por principios
+      - muéstrame las categorías
+      - cuáles son los 4 principios
+      - ver principios de wcag
