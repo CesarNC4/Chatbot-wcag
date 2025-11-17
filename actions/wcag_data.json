@@ -1,0 +1,200 @@
+{
+	"criterios": [
+		{
+			"id": "1.1.1",
+			"nombre": "Contexto para multimedia",
+			"definición": "Este criterio dice que todos los contenidos multimedia (fotos, mapas, arte, imágenes gráficas, info-gráficas, videos, etc) deben tener texto alternativo en ellos para poder ser accesible y usado por lectores de pantalla entre otras herramientas.",
+			"guia": "Asegurarse que los contenidos multimedia tengan una etiqueta 'alt' que sea clara y descriptiva, pero no muy larga, sobre lo que es y la razón del contenido."
+		},
+		{
+			"id": "1.2.1",
+			"nombre": "Solo audio y solo video (pre-grabados)",
+			"definición": "Este criterio dice que para multimedia de audio o video, debe estar disponible una transcripción de texto sobre lo que se dice en ellos, con la añadidura de un track de audio para videos en los que no haya sonido, donde se diga lo que está pasando en el video.",
+			"guia": "Asegurarse de tener una transcripción de texto por cada uno de sus elementos de audio y video pre-grabados donde sean necesarios."
+		},
+		{
+			"id": "1.2.2",
+			"nombre": "Subtítulos (pre-grabados)",
+			"definición": "Este criterio dice que para todos los videos pre-grabados, deben estar disponibles subtítulos sincronizados con el video, que describan lo que se está diciendo y todos los sonidos importantes.",
+			"guia": "Asegurarse de tener subtítulos en todos los videos pre-grabados donde sea necesario."
+		},
+		{
+			"id": "1.2.3",
+			"nombre": "Audio descripción o alternativa multimedia (pre-grabados)",
+			"definición": "Este criterio dice que para todos los videos pre-grabados, deben estar disponibles transcipciones de texto o descripción de audio que describa la información visual que no es descrita por medio del audio del video.",
+			"guia": "Asegurarse de tener transcipciones de texto sobre lo que se esté haciendo o las cosas más importantes de sus videos donde no haya audio."
+		},
+		{
+			"id": "1.3.1",
+			"nombre": "Información y relaciones",
+			"definición": "Este criterio dice que la información, relaciones y estructura transmitidas a través de contenido visual o de audio deben estar disponibles también programaticamente, o por medio de texto.",
+			"guia": "Asegurarse de usar la semántica correcta en el código cuando sea necesario, por ejemplo, '<p>Get out of bed <span>now</span>!</p>' siendo un mal uso de semántica y 'Get out of bed <em>now</em>!' siendo un buen uso de semántica."
+		},
+		{
+			"id": "1.3.2",
+			"nombre": "Secuencia Significativa",
+			"definición": "Este criterio dice que se debe preservar la secuencia lógica del contenido en el código (programaticamente)",
+			"guia": "Asegurarse de poner todos los bloques de contenido en la secuencia en la que desea que el usuario las siga, haciendo uso de 'float' y css para acomodarlos sin arruinar el orden en el código."
+		},
+		{
+			"id": "1.3.3",
+			"nombre": "Características Sensoriales",
+			"definición": "Este criterio dice que todas las instrucciones que deba seguir el usuario, NO deben depender únicamente de forma, tamaño, ubicación visual, orientación o sonido.",
+			"guia": "Asegurarse de que los elementos no dependan del color, tamaño, ubicación orientación o sonido que hace, o si es necesario que lo tengan, que haya otra forma en la que el usuario pueda seguir las instrucciones que no tengan que ver con ninguno de ellos, por ejemplo, usando texto para las instrucciones."
+		},
+		{
+			"id": "1.4.1",
+			"nombre": "Uso del color",
+			"definición": "Este criterio dice que los colores NO pueden ser la única manera de transmitir información.",
+			"guia": "Asegurarse de no usar únicamente colores para transmitir información al usuario sobre el uso o el contexto del contenido, sino usar también texto para transmitir esta información."
+		},
+		{
+			"id": "1.4.2",
+			"nombre": "Control de Audio",
+			"definición": "Este criterio dice que los usuarios deben tener maneras de pausar o detener cualquier audio que se reproduzca automáticamente y que dure más de 3 segundos.",
+			"guia": "Asegurarse de que todos los contenidos de audio que duren más de 3 segundos puedan pausarse o detenerse."
+		},
+		{
+			"id": "2.1.1",
+			"nombre": "Teclado",
+			"definición": "Este criterio dice que todas las funcionalidades deben estar disponibles de ser operadas únicamente con el teclado.",
+			"guia": "Asegurarse que todas las acciones de puntero tengan una equivalente con el teclado."
+		},
+		{
+			"id": "2.1.2",
+			"nombre": "Sin trampa de teclado",
+			"definición": "Este criterio dice que los usuarios deben poder usar el teclado para navegar por todas las partes de su sitio web.",
+			"guia": "Asegurarse que el usuario sepa como navegar fuera de componentes o retroceder sus acciones usando únicamente el teclado."
+		},
+		{
+			"id": "2.1.4",
+			"nombre": "Atajos de teclado de una sola tecla",
+			"definición": "Este criterio dice que los usuarios deben poder deshabilitar o reasignar los atajos de teclado que impliquen presionar una sola tecla.",
+			"guia": "Asegurarse que los atajos de teclado puedan ser deshabilitados o reasignados."
+		},
+		{
+			"id": "2.2.1",
+			"nombre": "Ajuste de reflejos",
+			"definición": "Este criterio dice que los usuarios deben poder extender, ajustar o deshabilitar los límites de tiempo",
+			"guia": "Asegurarse de dejarle al usuario acceder a una configuración para que el usuario pueda extender, ajustar o deshabilitar los límites de tiempo."
+		},
+		{
+			"id": "2.2.2",
+			"nombre": "Pausar, detener, esconder",
+			"definición": "Este criterio dice que los usuarios deben ser capaces de pausar, detener o esconder cualquier contenido que se mueva, parpadee, desplace o se actualice automáticamente.",
+			"guia": "Asegurarse de que el usuario tenga acceso a los controles de los contenidos que sucedan en paralelo con otros contenidos, siendo capaces de pausar, detener o esconder el contenido."
+		},
+		{
+			"id": "2.3.1",
+			"nombre": "Umbral de tres destello o menos",
+			"definición": "Este criterio dice que ninguno de los elementos de la página web pueden destellar más de 3 veces por segundo.",
+			"guia": "Asegurarse de evitar contenido que destelle y/o parpadee, o mínimo mantenerlo debajo del umbral, que es de 3 veces por segundo."
+		},
+		{
+			"id": "2.4.1",
+			"nombre": "Evitar bloques",
+			"definición": "Este criterio dice que se debe proveer un link para saltarse bloques de contenido repetitivos y llegar al contenido principal.",
+			"guia": "Asegurarse de poner un botón o un link con el cual el usuario pueda saltarse contenido repetitivo."
+		},
+		{
+			"id": "2.4.2",
+			"nombre": "Títulos de página",
+			"definición": "Este criterio dice que cada página debe tener un título único y descriptivo que le de a saber a los usuarios el tema o propósito.",
+			"guia": "Asegurarse que la etiqueta <title> sea única y descriptiva del contenido de la página, pero manteniendola por debajo de los 60 caracteres."
+		},
+		{
+			"id": "2.4.3",
+			"nombre": "Orden de enfoque",
+			"definición": "Este criterio dice que los usuarios deben poder navegar por el sitio web con el teclado en un orden lógico que que no afecte el significado del contenido.",
+			"guia": "Asegurarse de que los elementos reciben el foco de atención en la página conserve el orden que se le quería dar y que no sea un orden incorrecto o ilógico."
+		},
+		{
+			"id": "2.4.4",
+			"nombre": "Propósito de enlaces (en contexto)",
+			"definición": "Este criterio dice que los usuarios deben saber el propósito o destinación de los links únicamente por el texto del link o el contexto de este.",
+			"guia": "Asegurarse de que todos los links tengan nombres descriptivos o estén en un contexto que deje saber al usuario para qué son y para dónde van."
+		},
+		{
+			"id": "2.5.1",
+			"nombre": "Gestos con el puntero",
+			"definición": "Este criterio dice que los usuarios deben ser capaces de realizar todas las acciones con un simple toque o tocando la pantalla. Se debe evitar requerir al usuario hacer gestos complejos que involucren dibujar líneas o usar múltiples puntos de contacto.",
+			"guia": "Asegurarse que las acciones con toques/clicks se activen cuando la persona deje de presionar/tocar (up-event) y nunca al tocar/click (down-event), asegurándose también de haber un mecanismo que permita que el usuario pueda detener la acción."
+		},
+		{
+			"id": "2.5.2",
+			"nombre": "Cancelación de puntero",
+			"definición": "Este criterio dice que los usuarios deben poder cancelar o deshacer acciones por clicks o toques unintencionales. Por cualquier interacción de un solo toque, se debe asegurar que la acción no comience inmediatamente, que pueda detenerse, deshacerse o revertirse al soltar el punto de contacto.",
+			"guia": "Asegurarse de que la cancelación de acciones con el puntero sean predecibles y consistentes. Use un up-event para realizar acciones y agregue algún mecanismo para que el usuario pueda decidir deshacer la acción o cancelarla."
+		},
+		{
+			"id": "2.5.3",
+			"nombre": "Etiquetas en los nombres",
+			"definición": "Este criterio dice que las etiquetas visuales deben coincidir con las etiquetas programáticas.",
+			"guia": "En donde sea posible, haga que el nombre del control y la etiqueta de texto de este sea la misma."
+		},
+		{
+			"id": "2.5.4",
+			"nombre": "Actuación por movimiento",
+			"definición": "Este criterio dice que las acciones desencadenadas por movimiento, como inclinar o sacudir, deben también ser operadas usando otros métodos, como botones o comandos de teclado.",
+			"guia": "Asegurarse de tener alternativas para acciones que requieran movimiento, sea por teclado o por botones."
+		},
+		{
+			"id": "3.1.1",
+			"nombre": "Lenguaje de la página",
+			"definición": "Este criterio dice que se debe configurar un lenguaje por defecto en el código para cada página.",
+			"guia": "Asegúrese de tener la etiqueta <html lang> en el código de su página web llenado con el lenguaje correspondiente que usa en su página."
+		},
+		{
+			"id": "3.2.1",
+			"nombre": "En enfoque",
+			"definición": "Este criterio dice que cuando los elementos reciben el foco, no se produce ningún cambio de contexto (por ejemplo, un formulario no se enviará automáticamente).",
+			"guia": "No cambie el contexto cuando el usuario esté navegando los focos en la página."
+		},
+		{
+			"id": "3.2.2",
+			"nombre": "En entrada",
+			"definición": "Este criterio dice que las entradas de usuario no deben desencadenar automáticamente un cambio en el contexto.",
+			"guia": "Asegúrese de alertar a los usuarios si el contexto de la página cambiará basada en el llenado de la entrada."
+		},
+		{
+			"id": "3.3.1",
+			"nombre": "Identificación de errores",
+			"definición": "Este criterio dice que cuando un usuario se equivoca en una entrada, identifique el error para el usuario.",
+			"guia": "Asegúrese de notificar al usuario de los errores de manera descriptiva y clara. Por ejemplo, si es un error de entrada, identifique el error y notifique al usuario de donde está y que es lo que debe hacer, enteramente por medio de texto."
+		},
+		{
+			"id": "3.3.2",
+			"nombre": "Etiquetas o Instrucciones",
+			"definición": "Este criterio dice que las etiquetas e instrucciones deben ser claras y descriptivas para que los usuarios sepan que acción es esperada y como interactuar con los formularios y otros elementos.",
+			"guia": "Asegúrese de poner etiquetas o instrucciones que el usuario pueda seguir cuando el contenido necesita una entrada del usuario."
+		},
+		{
+			"id": "4.1.1",
+			"nombre": "Análisis de errores",
+			"definición": "Este criterio dice que se debe asegurar que su código esté libre de errores (por ejemplo, que las etiquetas de inicio y final estén en su lugar). Este criterio ya no hace parte del WCAG 2.2.",
+			"guia": "Asegúrese de probar su página web y arreglar todos los errores que puede haber en ella antes de abrirla al público."
+		},
+		{
+			"id": "4.1.2",
+			"nombre": "Nombre, rol, valor",
+			"definición": "Este criterio dice que todos los elementos interactivos deben tener nombres (que son) y roles (que es lo que hace) y los usuarios deben ser capaces de determinar y establecer mediante programación de estado (por ejemplo, marcado o desmarcado), la propiedad (información adicional sobre el elemento), y/o su valor.",
+			"guia": "Asegúrese de dar a los componentes los nombres, roles y valores correctos para que el usuario sepa como usarlos."
+		}
+
+	],
+
+	"glosario": [
+		{
+			"nombre": "down-event",
+			"definición": "Evento que ocurre cuando se presiona con el puntero o se toca un objeto. Este evento puede tener nombres diferentes dependiendo de la plataforma, como 'touchstart' o 'mousedown'."
+		},
+		{
+			"nombre": "up-event",
+			"definición": "Evento que ocurre cuando se deja de presionar con el puntero o se alza el dedo de la pantalla. Este evento puede tener nombres diferentes dependiendo de la plataforma, como 'touchend' o 'mouseup'."
+		},
+		{
+			"nombre": "entrada",
+			"definición": "En este contexto, una 'entrada' se refiere a todas las acciones en las que el usuario puede interactuar, usualmente se refiere a formularios u otros elementos donde el usuario llenará contenido."
+		}
+	]
+}
