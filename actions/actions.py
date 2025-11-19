@@ -66,7 +66,6 @@ class ActionGetContent(Action):
             json_path = "wcag_data.json"
             with open(json_path, 'r', encoding='utf-8') as f:
                 self.wcag_data = json.load(f)
-
             print("Base de Conocimiento (wcag_data.json) cargada exitosamente.")
         except FileNotFoundError:
             print(f"ERROR: No se encontró el archivo '{json_path}'. El bot no podrá dar definiciones.")
@@ -91,28 +90,34 @@ class ActionGetContent(Action):
         
         # Normalizar el ID
         criterio_id = criterio_id.lower().strip()
-
-        # 2. Lógica de búsqueda (Depende del JSON)
         content_found = None
-        
-        # Supuesto: El JSON tendrá una clave "criterios" y "glosario"
-        if criterio_id in self.wcag_data.get("criterios", {}):
-            content_found = self.wcag_data["criterios"][criterio_id]
-        elif criterio_id in self.wcag_data.get("glosario", {}):
-            content_found = self.wcag_data["glosario"][criterio_id]
 
-        
+        # 2. Lógica de búsqueda en el JSON
+        # Busqueda en base al ID
+        Lista_criterios = self.wcag_data.get("criterios", [])
+        for item in Lista_criterios:
+            if item.get("id") == criterio_id:
+                content_found = item
+                break
+
+        # Si no está en criterios, buscamos en 'glosario' comparando el campo "nombre"
+        if not content_found:
+            Lista_glosario = self.wcag_data.get("glosario", [])
+            for item in Lista_glosario:
+                if item.get("nombre", "").lower() == criterio_id:
+                    content_found = item
+                    break
+
         # 3. Responder al usuario
         if content_found:
-            # Aún por definir...
             # Supuesto: cada entrada tiene 'definicion' y 'guia'
-            definicion = content_found.get("definicion", "No se encontró definición.")
+            definicion = content_found.get("definición", "No se encontró definición.")
             guia = content_found.get("guia", "No se encontró guía.")
             
             response = f"**{criterio_id.upper()}**:\n\n"
             response += f"**Definición:**\n{definicion}\n\n"
             
-            if "guia" in content_found:
+            if "guia" in content_found and content_found["guia"]:
                  response += f"**Guía Rápida:**\n{guia}"
             
             dispatcher.utter_message(text=response)

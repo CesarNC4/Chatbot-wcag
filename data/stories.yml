@@ -1,4 +1,4 @@
-ersion: "3.1"
+version: "3.1"
 
 stories:
 
@@ -12,25 +12,27 @@ stories:
   - intent: navegar_principios
   - action: utter_ask_principle
 
-- story: consultar
+- story: consultar criterio
   steps:
   - intent: consultar_criterio
-  - action: utter_ask_principle
+  - action: action_get_content
 
 - story: ver guia
   steps:
   - intent: obtener_guia
-  - action: utter_ask_principle
+  - action: action_get_content
 
 - story: validar
   steps:
   - intent: validar_codigo
   - action: utter_ask_validation
+  - intent: validar_codigo 
+  - action: action_validate_code
   
 - story: consultar glosario
   steps:
   - intent: consultar_glosario
-  - action: utter_ask_principle
+  - action: action_get_content
   
 - story: challenge
   steps:
