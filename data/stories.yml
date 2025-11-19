@@ -1,30 +1,44 @@
-version: "3.1"
+ersion: "3.1"
 
 stories:
 
-- story: happy path
+- story: hello
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
+- story: navegar
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: navegar_principios
+  - action: utter_ask_principle
 
-- story: sad path 2
+- story: consultar
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - intent: consultar_criterio
+  - action: utter_ask_principle
+
+- story: ver guia
+  steps:
+  - intent: obtener_guia
+  - action: utter_ask_principle
+
+- story: validar
+  steps:
+  - intent: validar_codigo
+  - action: utter_ask_validation
+  
+- story: consultar glosario
+  steps:
+  - intent: consultar_glosario
+  - action: utter_ask_principle
+  
+- story: challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  
+- story: adios
+  steps:
+  - intent: goodbye
   - action: utter_goodbye
+
