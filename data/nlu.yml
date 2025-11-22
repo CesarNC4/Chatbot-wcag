@@ -50,6 +50,11 @@ nlu:
       - /validar
       - validar fragmento
       - mi código está bien?
+      - <img src="foto.jpg">
+      - <a href="#">click aqui</a>
+      - <div><p>hola</p></div>
+      - <input type="text">
+      - <img src="img.png" alt="texto">
 
   # Intención para el CU-5: Consultar glosario
   - intent: consultar_glosario
@@ -60,6 +65,9 @@ nlu:
       - qué es WAI-ARIA
       - glosario
       - define ARIA
+      - qué es [down-event](criterio_id)
+      - definición de [up-event](criterio_id)
+      - qué significa [entrada](criterio_id)
 
   # Intención para el CU-1: Navegar
   - intent: navegar_principios
