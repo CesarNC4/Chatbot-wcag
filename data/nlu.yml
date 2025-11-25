@@ -1,23 +1,25 @@
 version: "3.1"
 
 nlu:
-  # Intención para saludar
   - intent: greet
     examples: |
       - hola
       - buenos dias
       - hey
       - buenas tardes
+      - /start
+      - start
+      - iniciar
+      - comenzar
 
-  # Intención para despedirse
   - intent: goodbye
     examples: |
       - adios
       - chao
       - hasta luego
       - bye
+      - me voy
 
-  # Intención para el CU-2: Consultar un criterio
   - intent: consultar_criterio
     examples: |
       - háblame del criterio [1.1.1](criterio_id)
@@ -31,7 +33,6 @@ nlu:
       - [2.2.1](criterio_id)
       - [navegación predecible](criterio_id)
 
-  # Intención para el CU-3: Pedir la guía/ejemplos
   - intent: obtener_guia
     examples: |
       - dame una guía completa
@@ -41,7 +42,6 @@ nlu:
       - dame las mejores prácticas
       - guía paso a paso
 
-  # Intención para el CU-4: Validar código
   - intent: validar_codigo
     examples: |
       - valida mi código
@@ -56,7 +56,6 @@ nlu:
       - <input type="text">
       - <img src="img.png" alt="texto">
 
-  # Intención para el CU-5: Consultar glosario
   - intent: consultar_glosario
     examples: |
       - qué es ARIA
@@ -69,7 +68,6 @@ nlu:
       - definición de [up-event](criterio_id)
       - qué significa [entrada](criterio_id)
 
-  # Intención para el CU-1: Navegar
   - intent: navegar_principios
     examples: |
       - quiero navegar por principios

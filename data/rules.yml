@@ -2,12 +2,42 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Responder siempre al saludo (incluye /start)
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Responder siempre a la despedida
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Responder siempre al Bot Challenge
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Consultar Criterio siempre que se pida
+  steps:
+  - intent: consultar_criterio
+  - action: action_get_content
+
+- rule: Consultar Glosario siempre que se pida
+  steps:
+  - intent: consultar_glosario
+  - action: action_get_content
+
+- rule: Pedir Guía siempre que se pida (traer contenido)
+  steps:
+  - intent: obtener_guia
+  - action: action_get_content
+
+- rule: Activar menú de navegación siempre
+  steps:
+  - intent: navegar_principios
+  - action: utter_ask_principle
+
+- rule: Manejar mensajes que no se entienden (Fallback)
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default

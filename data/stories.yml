@@ -2,45 +2,9 @@ version: "3.1"
 
 stories:
 
-- story: hello
-  steps:
-  - intent: greet
-  - action: utter_greet
-
-- story: navegar
-  steps:
-  - intent: navegar_principios
-  - action: utter_ask_principle
-
-- story: consultar criterio
-  steps:
-  - intent: consultar_criterio
-  - action: action_get_content
-
-- story: ver guia
-  steps:
-  - intent: obtener_guia
-  - action: action_get_content
-
-- story: validar
+- story: Flujo de validación interactivo
   steps:
   - intent: validar_codigo
   - action: utter_ask_validation
-  - intent: validar_codigo 
+  - intent: validar_codigo  # El usuario envía el código HTML
   - action: action_validate_code
-  
-- story: consultar glosario
-  steps:
-  - intent: consultar_glosario
-  - action: action_get_content
-  
-- story: challenge
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-  
-- story: adios
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
