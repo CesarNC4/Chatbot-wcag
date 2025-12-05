@@ -1,200 +1,346 @@
 {
-	"criterios": [
-		{
-			"id": "1.1.1",
-			"nombre": "Contexto para multimedia",
-			"definición": "Este criterio dice que todos los contenidos multimedia (fotos, mapas, arte, imágenes gráficas, info-gráficas, videos, etc) deben tener texto alternativo en ellos para poder ser accesible y usado por lectores de pantalla entre otras herramientas.",
-			"guia": "Asegurarse que los contenidos multimedia tengan una etiqueta 'alt' que sea clara y descriptiva, pero no muy larga, sobre lo que es y la razón del contenido."
-		},
-		{
-			"id": "1.2.1",
-			"nombre": "Solo audio y solo video (pre-grabados)",
-			"definición": "Este criterio dice que para multimedia de audio o video, debe estar disponible una transcripción de texto sobre lo que se dice en ellos, con la añadidura de un track de audio para videos en los que no haya sonido, donde se diga lo que está pasando en el video.",
-			"guia": "Asegurarse de tener una transcripción de texto por cada uno de sus elementos de audio y video pre-grabados donde sean necesarios."
-		},
-		{
-			"id": "1.2.2",
-			"nombre": "Subtítulos (pre-grabados)",
-			"definición": "Este criterio dice que para todos los videos pre-grabados, deben estar disponibles subtítulos sincronizados con el video, que describan lo que se está diciendo y todos los sonidos importantes.",
-			"guia": "Asegurarse de tener subtítulos en todos los videos pre-grabados donde sea necesario."
-		},
-		{
-			"id": "1.2.3",
-			"nombre": "Audio descripción o alternativa multimedia (pre-grabados)",
-			"definición": "Este criterio dice que para todos los videos pre-grabados, deben estar disponibles transcipciones de texto o descripción de audio que describa la información visual que no es descrita por medio del audio del video.",
-			"guia": "Asegurarse de tener transcipciones de texto sobre lo que se esté haciendo o las cosas más importantes de sus videos donde no haya audio."
-		},
-		{
-			"id": "1.3.1",
-			"nombre": "Información y relaciones",
-			"definición": "Este criterio dice que la información, relaciones y estructura transmitidas a través de contenido visual o de audio deben estar disponibles también programaticamente, o por medio de texto.",
-			"guia": "Asegurarse de usar la semántica correcta en el código cuando sea necesario, por ejemplo, '<p>Get out of bed <span>now</span>!</p>' siendo un mal uso de semántica y 'Get out of bed <em>now</em>!' siendo un buen uso de semántica."
-		},
-		{
-			"id": "1.3.2",
-			"nombre": "Secuencia Significativa",
-			"definición": "Este criterio dice que se debe preservar la secuencia lógica del contenido en el código (programaticamente)",
-			"guia": "Asegurarse de poner todos los bloques de contenido en la secuencia en la que desea que el usuario las siga, haciendo uso de 'float' y css para acomodarlos sin arruinar el orden en el código."
-		},
-		{
-			"id": "1.3.3",
-			"nombre": "Características Sensoriales",
-			"definición": "Este criterio dice que todas las instrucciones que deba seguir el usuario, NO deben depender únicamente de forma, tamaño, ubicación visual, orientación o sonido.",
-			"guia": "Asegurarse de que los elementos no dependan del color, tamaño, ubicación orientación o sonido que hace, o si es necesario que lo tengan, que haya otra forma en la que el usuario pueda seguir las instrucciones que no tengan que ver con ninguno de ellos, por ejemplo, usando texto para las instrucciones."
-		},
-		{
-			"id": "1.4.1",
-			"nombre": "Uso del color",
-			"definición": "Este criterio dice que los colores NO pueden ser la única manera de transmitir información.",
-			"guia": "Asegurarse de no usar únicamente colores para transmitir información al usuario sobre el uso o el contexto del contenido, sino usar también texto para transmitir esta información."
-		},
-		{
-			"id": "1.4.2",
-			"nombre": "Control de Audio",
-			"definición": "Este criterio dice que los usuarios deben tener maneras de pausar o detener cualquier audio que se reproduzca automáticamente y que dure más de 3 segundos.",
-			"guia": "Asegurarse de que todos los contenidos de audio que duren más de 3 segundos puedan pausarse o detenerse."
-		},
-		{
-			"id": "2.1.1",
-			"nombre": "Teclado",
-			"definición": "Este criterio dice que todas las funcionalidades deben estar disponibles de ser operadas únicamente con el teclado.",
-			"guia": "Asegurarse que todas las acciones de puntero tengan una equivalente con el teclado."
-		},
-		{
-			"id": "2.1.2",
-			"nombre": "Sin trampa de teclado",
-			"definición": "Este criterio dice que los usuarios deben poder usar el teclado para navegar por todas las partes de su sitio web.",
-			"guia": "Asegurarse que el usuario sepa como navegar fuera de componentes o retroceder sus acciones usando únicamente el teclado."
-		},
-		{
-			"id": "2.1.4",
-			"nombre": "Atajos de teclado de una sola tecla",
-			"definición": "Este criterio dice que los usuarios deben poder deshabilitar o reasignar los atajos de teclado que impliquen presionar una sola tecla.",
-			"guia": "Asegurarse que los atajos de teclado puedan ser deshabilitados o reasignados."
-		},
-		{
-			"id": "2.2.1",
-			"nombre": "Ajuste de reflejos",
-			"definición": "Este criterio dice que los usuarios deben poder extender, ajustar o deshabilitar los límites de tiempo",
-			"guia": "Asegurarse de dejarle al usuario acceder a una configuración para que el usuario pueda extender, ajustar o deshabilitar los límites de tiempo."
-		},
-		{
-			"id": "2.2.2",
-			"nombre": "Pausar, detener, esconder",
-			"definición": "Este criterio dice que los usuarios deben ser capaces de pausar, detener o esconder cualquier contenido que se mueva, parpadee, desplace o se actualice automáticamente.",
-			"guia": "Asegurarse de que el usuario tenga acceso a los controles de los contenidos que sucedan en paralelo con otros contenidos, siendo capaces de pausar, detener o esconder el contenido."
-		},
-		{
-			"id": "2.3.1",
-			"nombre": "Umbral de tres destello o menos",
-			"definición": "Este criterio dice que ninguno de los elementos de la página web pueden destellar más de 3 veces por segundo.",
-			"guia": "Asegurarse de evitar contenido que destelle y/o parpadee, o mínimo mantenerlo debajo del umbral, que es de 3 veces por segundo."
-		},
-		{
-			"id": "2.4.1",
-			"nombre": "Evitar bloques",
-			"definición": "Este criterio dice que se debe proveer un link para saltarse bloques de contenido repetitivos y llegar al contenido principal.",
-			"guia": "Asegurarse de poner un botón o un link con el cual el usuario pueda saltarse contenido repetitivo."
-		},
-		{
-			"id": "2.4.2",
-			"nombre": "Títulos de página",
-			"definición": "Este criterio dice que cada página debe tener un título único y descriptivo que le de a saber a los usuarios el tema o propósito.",
-			"guia": "Asegurarse que la etiqueta <title> sea única y descriptiva del contenido de la página, pero manteniendola por debajo de los 60 caracteres."
-		},
-		{
-			"id": "2.4.3",
-			"nombre": "Orden de enfoque",
-			"definición": "Este criterio dice que los usuarios deben poder navegar por el sitio web con el teclado en un orden lógico que que no afecte el significado del contenido.",
-			"guia": "Asegurarse de que los elementos reciben el foco de atención en la página conserve el orden que se le quería dar y que no sea un orden incorrecto o ilógico."
-		},
-		{
-			"id": "2.4.4",
-			"nombre": "Propósito de enlaces (en contexto)",
-			"definición": "Este criterio dice que los usuarios deben saber el propósito o destinación de los links únicamente por el texto del link o el contexto de este.",
-			"guia": "Asegurarse de que todos los links tengan nombres descriptivos o estén en un contexto que deje saber al usuario para qué son y para dónde van."
-		},
-		{
-			"id": "2.5.1",
-			"nombre": "Gestos con el puntero",
-			"definición": "Este criterio dice que los usuarios deben ser capaces de realizar todas las acciones con un simple toque o tocando la pantalla. Se debe evitar requerir al usuario hacer gestos complejos que involucren dibujar líneas o usar múltiples puntos de contacto.",
-			"guia": "Asegurarse que las acciones con toques/clicks se activen cuando la persona deje de presionar/tocar (up-event) y nunca al tocar/click (down-event), asegurándose también de haber un mecanismo que permita que el usuario pueda detener la acción."
-		},
-		{
-			"id": "2.5.2",
-			"nombre": "Cancelación de puntero",
-			"definición": "Este criterio dice que los usuarios deben poder cancelar o deshacer acciones por clicks o toques unintencionales. Por cualquier interacción de un solo toque, se debe asegurar que la acción no comience inmediatamente, que pueda detenerse, deshacerse o revertirse al soltar el punto de contacto.",
-			"guia": "Asegurarse de que la cancelación de acciones con el puntero sean predecibles y consistentes. Use un up-event para realizar acciones y agregue algún mecanismo para que el usuario pueda decidir deshacer la acción o cancelarla."
-		},
-		{
-			"id": "2.5.3",
-			"nombre": "Etiquetas en los nombres",
-			"definición": "Este criterio dice que las etiquetas visuales deben coincidir con las etiquetas programáticas.",
-			"guia": "En donde sea posible, haga que el nombre del control y la etiqueta de texto de este sea la misma."
-		},
-		{
-			"id": "2.5.4",
-			"nombre": "Actuación por movimiento",
-			"definición": "Este criterio dice que las acciones desencadenadas por movimiento, como inclinar o sacudir, deben también ser operadas usando otros métodos, como botones o comandos de teclado.",
-			"guia": "Asegurarse de tener alternativas para acciones que requieran movimiento, sea por teclado o por botones."
-		},
-		{
-			"id": "3.1.1",
-			"nombre": "Lenguaje de la página",
-			"definición": "Este criterio dice que se debe configurar un lenguaje por defecto en el código para cada página.",
-			"guia": "Asegúrese de tener la etiqueta <html lang> en el código de su página web llenado con el lenguaje correspondiente que usa en su página."
-		},
-		{
-			"id": "3.2.1",
-			"nombre": "En enfoque",
-			"definición": "Este criterio dice que cuando los elementos reciben el foco, no se produce ningún cambio de contexto (por ejemplo, un formulario no se enviará automáticamente).",
-			"guia": "No cambie el contexto cuando el usuario esté navegando los focos en la página."
-		},
-		{
-			"id": "3.2.2",
-			"nombre": "En entrada",
-			"definición": "Este criterio dice que las entradas de usuario no deben desencadenar automáticamente un cambio en el contexto.",
-			"guia": "Asegúrese de alertar a los usuarios si el contexto de la página cambiará basada en el llenado de la entrada."
-		},
-		{
-			"id": "3.3.1",
-			"nombre": "Identificación de errores",
-			"definición": "Este criterio dice que cuando un usuario se equivoca en una entrada, identifique el error para el usuario.",
-			"guia": "Asegúrese de notificar al usuario de los errores de manera descriptiva y clara. Por ejemplo, si es un error de entrada, identifique el error y notifique al usuario de donde está y que es lo que debe hacer, enteramente por medio de texto."
-		},
-		{
-			"id": "3.3.2",
-			"nombre": "Etiquetas o Instrucciones",
-			"definición": "Este criterio dice que las etiquetas e instrucciones deben ser claras y descriptivas para que los usuarios sepan que acción es esperada y como interactuar con los formularios y otros elementos.",
-			"guia": "Asegúrese de poner etiquetas o instrucciones que el usuario pueda seguir cuando el contenido necesita una entrada del usuario."
-		},
-		{
-			"id": "4.1.1",
-			"nombre": "Análisis de errores",
-			"definición": "Este criterio dice que se debe asegurar que su código esté libre de errores (por ejemplo, que las etiquetas de inicio y final estén en su lugar). Este criterio ya no hace parte del WCAG 2.2.",
-			"guia": "Asegúrese de probar su página web y arreglar todos los errores que puede haber en ella antes de abrirla al público."
-		},
-		{
-			"id": "4.1.2",
-			"nombre": "Nombre, rol, valor",
-			"definición": "Este criterio dice que todos los elementos interactivos deben tener nombres (que son) y roles (que es lo que hace) y los usuarios deben ser capaces de determinar y establecer mediante programación de estado (por ejemplo, marcado o desmarcado), la propiedad (información adicional sobre el elemento), y/o su valor.",
-			"guia": "Asegúrese de dar a los componentes los nombres, roles y valores correctos para que el usuario sepa como usarlos."
-		}
-
-	],
-
-	"glosario": [
-		{
-			"nombre": "down-event",
-			"definición": "Evento que ocurre cuando se presiona con el puntero o se toca un objeto. Este evento puede tener nombres diferentes dependiendo de la plataforma, como 'touchstart' o 'mousedown'."
-		},
-		{
-			"nombre": "up-event",
-			"definición": "Evento que ocurre cuando se deja de presionar con el puntero o se alza el dedo de la pantalla. Este evento puede tener nombres diferentes dependiendo de la plataforma, como 'touchend' o 'mouseup'."
-		},
-		{
-			"nombre": "entrada",
-			"definición": "En este contexto, una 'entrada' se refiere a todas las acciones en las que el usuario puede interactuar, usualmente se refiere a formularios u otros elementos donde el usuario llenará contenido."
-		}
-	]
+  "criterios": [
+    {
+      "id": "1.1.1",
+      "nombre": "Contenido no textual",
+      "definición": "Todo contenido no textual (imágenes, gráficos, etc.) debe tener una alternativa textual que sirva para el mismo propósito.",
+      "beneficio": "Permite que personas ciegas entiendan el contenido de imágenes mediante lectores de pantalla y ayuda a usuarios con conexiones lentas.",
+      "implementacion": "- Imágenes informativas: El atributo 'alt' debe describir el contenido.\n- Imágenes decorativas: Usa alt=\"\" (vacío) para que los lectores las ignoren.\n- Botones de imagen: El 'alt' debe describir la acción (ej. 'Buscar'), no la imagen.",
+      "errores": "- Omitir el atributo 'alt'.\n- Usar textos genéricos como 'imagen', 'foto' o 'clic aquí'.\n- Redundancia: Decir 'Imagen de...' en el texto alternativo.",
+      "codigo_bueno": "<img src=\"grafico.png\" alt=\"Ventas del trimestre aumentaron un 15%\">",
+      "codigo_malo": "<img src=\"grafico.png\">"
+    },
+    {
+      "id": "1.2.1",
+      "nombre": "Solo audio y solo video",
+      "definición": "Para contenido grabado de solo audio o solo video, se debe proporcionar una alternativa (transcripción o descripción textual).",
+      "beneficio": "Permite a personas sordas leer el contenido de audio y a personas ciegas leer la descripción de un video mudo.",
+      "implementacion": "- Solo audio: Ofrece una transcripción completa del diálogo y sonidos importantes.\n- Solo video: Provee una descripción textual detallada de la acción visual.",
+      "errores": "- Subir un podcast sin transcripción.\n- Publicar un video mudo sin describir qué sucede en él.",
+      "codigo_bueno": "<audio src=\"podcast.mp3\"></audio>\n<a href=\"transcripcion.txt\">Descargar Transcripción</a>",
+      "codigo_malo": ""
+    },
+    {
+      "id": "1.2.2",
+      "nombre": "Subtítulos (pregrabados)",
+      "definición": "Se deben proporcionar subtítulos sincronizados para todo el contenido de video pregrabado con audio.",
+      "beneficio": "Esencial para personas sordas y útil para cualquiera en entornos ruidosos o sin audio.",
+      "implementacion": "- Asegura que los subtítulos estén sincronizados.\n- Incluye identificación de hablantes y sonidos no verbales importantes [aplausos].",
+      "errores": "- Subtítulos automáticos sin revisar (suelen tener muchos errores).\n- Falta de sincronización.",
+      "codigo_bueno": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track kind=\"captions\" src=\"subs.vtt\" srclang=\"es\" label=\"Español\">\n</video>",
+      "codigo_malo": ""
+    },
+    {
+      "id": "1.2.3",
+      "nombre": "Audiodescripción o alternativa",
+      "definición": "Ofrece una audiodescripción o una transcripción completa para videos que contienen información visual que no se explica en el audio.",
+      "beneficio": "Permite que las personas ciegas no se pierdan información visual clave del video.",
+      "implementacion": "- Añade una pista de audio extra narrando las acciones.\n- O proporciona un texto debajo del video que describa lo visual y lo auditivo.",
+      "errores": "- Confiar solo en lo visual para transmitir información en un video.",
+      "codigo_bueno": "",
+      "codigo_malo": ""
+    },
+    {
+      "id": "1.3.1",
+      "nombre": "Información y relaciones",
+      "definición": "La información, estructura y relaciones transmitidas visualmente deben ser determinables por software (usando HTML semántico).",
+      "beneficio": "Los lectores de pantalla pueden navegar por encabezados y entender la estructura de formularios y tablas.",
+      "implementacion": "- Usa etiquetas <h1> a <h6> para títulos, no solo texto en negrita.\n- Usa <label> asociado a los <input>.\n- Usa listas <ul>/<ol> reales.",
+      "errores": "- Usar texto grande o negrita en lugar de encabezados reales.\n- Usar <div> para simular tablas o listas.",
+      "codigo_bueno": "<label for=\"nombre\">Nombre:</label>\n<input type=\"text\" id=\"nombre\">",
+      "codigo_malo": "<span>Nombre:</span>\n<input type=\"text\">"
+    },
+    {
+      "id": "1.3.2",
+      "nombre": "Secuencia significativa",
+      "definición": "Cuando el orden del contenido es importante para su significado, el orden en el código (DOM) debe ser correcto.",
+      "beneficio": "Asegura que el lector de pantalla lea el contenido en el orden lógico, no en el orden visual que a veces cambia con CSS.",
+      "implementacion": "- Estructura tu HTML en el orden lógico de lectura.\n- Evita usar CSS (flex-order) para cambiar drásticamente el orden visual si rompe el sentido lógico.",
+      "errores": "- Usar CSS para mover un botón de 'Enviar' al principio visualmente, pero dejarlo al final en el código.",
+      "codigo_bueno": "",
+      "codigo_malo": ""
+    },
+    {
+      "id": "1.3.3",
+      "nombre": "Características sensoriales",
+      "definición": "No dependas solo de características sensoriales (forma, tamaño, ubicación, sonido) para dar instrucciones.",
+      "beneficio": "Personas ciegas o con daltonismo pueden no percibir 'el botón rojo' o 'el cuadro a la derecha'.",
+      "implementacion": "- Si dices 'haz clic en el botón verde', añade texto que diga 'haz clic en el botón verde *Enviar*'.\n- No uses solo sonido para notificar.",
+      "errores": "- Instrucciones como: 'Haz clic en el círculo de la derecha'.\n- 'Los campos en rojo son obligatorios' (sin otro indicador).",
+      "codigo_bueno": "<p>Presiona el botón 'Guardar' para finalizar.</p>",
+      "codigo_malo": "<p>Presiona el botón redondo para finalizar.</p>"
+    },
+    {
+      "id": "1.4.1",
+      "nombre": "Uso del color",
+      "definición": "El color no debe ser el único medio visual para transmitir información, indicar una acción o distinguir un elemento.",
+      "beneficio": "Personas con daltonismo o pantallas en blanco y negro podrán entender la información.",
+      "implementacion": "- En formularios, usa texto (* obligatorio) además del color rojo para errores.\n- En enlaces, usa subrayado u otro indicador además del color.",
+      "errores": "- Marcar errores solo cambiando el borde a rojo.\n- Gráficos que solo se distinguen por colores similares.",
+      "codigo_bueno": "<span class=\"error\">Error: Campo obligatorio</span>",
+      "codigo_malo": "<span style=\"color: red;\">Campo obligatorio</span>"
+    },
+    {
+      "id": "1.4.2",
+      "nombre": "Control de audio",
+      "definición": "Si un audio suena automáticamente más de 3 segundos, debe haber un mecanismo para pausarlo o detenerlo.",
+      "beneficio": "El audio automático interfiere con los lectores de pantalla y puede molestar a usuarios con dificultades cognitivas.",
+      "implementacion": "- Evita el autoplay.\n- Si es necesario, pon un botón de pausa bien visible al inicio.",
+      "errores": "- Música de fondo que no se puede apagar.",
+      "codigo_bueno": "",
+      "codigo_malo": ""
+    },
+    {
+      "id": "2.1.1",
+      "nombre": "Teclado",
+      "definición": "Toda la funcionalidad debe ser operable a través del teclado.",
+      "beneficio": "Esencial para usuarios con discapacidades motoras que no usan ratón y usuarios ciegos.",
+      "implementacion": "- Asegúrate de que todos los botones y enlaces se activen con Enter o Espacio.\n- Usa elementos nativos (<button>, <a>) siempre que sea posible.",
+      "errores": "- Usar <div onclick=...> sin hacerlo accesible por teclado.\n- Elementos que solo aparecen al pasar el mouse (hover) y no con foco.",
+      "codigo_bueno": "<button onclick=\"accion()\">Haz clic</button>",
+      "codigo_malo": "<div onclick=\"accion()\">Haz clic</div>"
+    },
+    {
+      "id": "2.1.2",
+      "nombre": "Sin trampa de teclado",
+      "definición": "Si el foco del teclado entra en un componente, debe poder salir de él usando solo el teclado.",
+      "beneficio": "Evita que los usuarios de teclado queden atrapados en un bucle dentro de un widget o modal.",
+      "implementacion": "- En modales, asegura que la tecla ESC cierre la ventana.\n- No secuestres la tecla TAB para que cicle infinitamente sin opción de salida.",
+      "errores": "- Modales que no se pueden cerrar con teclado.\n- Editores de texto incrustados que atrapan el foco.",
+      "codigo_bueno": "",
+      "codigo_malo": ""
+    },
+    {
+      "id": "2.1.4",
+      "nombre": "Atajos de teclado",
+      "definición": "Si usas atajos de una sola tecla (ej. letra 's' para guardar), el usuario debe poder desactivarlos o reasignarlos.",
+      "beneficio": "Evita activaciones accidentales, especialmente para usuarios que usan dictado por voz.",
+      "implementacion": "- Permite apagar atajos.\n- O permite que el atajo solo funcione cuando el foco está en un componente específico.",
+      "errores": "- Atajos globales que se activan mientras el usuario intenta escribir texto.",
+      "codigo_bueno": "",
+      "codigo_malo": ""
+    },
+    {
+      "id": "2.2.1",
+      "nombre": "Tiempo ajustable",
+      "definición": "Si hay límites de tiempo (ej. sesión expira), el usuario debe poder desactivarlo, ajustarlo o extenderlo.",
+      "beneficio": "Personas con discapacidades motoras o cognitivas pueden necesitar más tiempo para interactuar.",
+      "implementacion": "- Ofrece un botón 'Necesito más tiempo' antes de que expire la sesión.",
+      "errores": "- Redireccionar o cerrar sesión automáticamente sin aviso previo.",
+      "codigo_bueno": "",
+      "codigo_malo": ""
+    },
+    {
+      "id": "2.2.2",
+      "nombre": "Pausar, detener, ocultar",
+      "definición": "Para contenido que se mueve, parpadea o se desplaza automáticamente (más de 5 seg), debe haber forma de pausarlo.",
+      "beneficio": "El movimiento constante distrae a usuarios con déficit de atención y dificulta la lectura.",
+      "implementacion": "- Botón de pausa en carruseles (sliders).\n- Evita marquesinas o texto que se desplaza.",
+      "errores": "- Sliders de imágenes automáticos sin controles de pausa.",
+      "codigo_bueno": "",
+      "codigo_malo": ""
+    },
+    {
+      "id": "2.3.1",
+      "nombre": "Umbral de tres destellos",
+      "definición": "El contenido no debe destellar más de 3 veces por segundo.",
+      "beneficio": "Previene ataques epilépticos fotosensibles.",
+      "implementacion": "- Evita videos o animaciones con luces estroboscópicas intensas.",
+      "errores": "- Intros de video con parpadeos rápidos y alto contraste.",
+      "codigo_bueno": "",
+      "codigo_malo": ""
+    },
+    {
+      "id": "2.4.1",
+      "nombre": "Evitar bloques",
+      "definición": "Debe haber un mecanismo para saltar bloques de contenido que se repiten (como menús) y llegar al contenido principal.",
+      "beneficio": "Ahorra tiempo a usuarios de teclado/lectores de pantalla evitando que pasen por todo el menú en cada página.",
+      "implementacion": "- Usa un enlace 'Saltar al contenido' al principio de la página (puede estar oculto visualmente hasta recibir foco).",
+      "errores": "- No incluir enlaces de salto en sitios con menús largos.",
+      "codigo_bueno": "<a href=\"#main\" class=\"skip-link\">Saltar al contenido</a>",
+      "codigo_malo": ""
+    },
+    {
+      "id": "2.4.2",
+      "nombre": "Títulos de página",
+      "definición": "Cada página web debe tener un título descriptivo y único.",
+      "beneficio": "Permite identificar rápidamente el contenido y la pestaña del navegador.",
+      "implementacion": "- La etiqueta <title> debe describir la página específica y luego el sitio.",
+      "errores": "- Todas las páginas se llaman 'Inicio' o 'Bienvenido'.",
+      "codigo_bueno": "<title>Contacto - Mi Empresa</title>",
+      "codigo_malo": "<title>Mi Empresa</title>"
+    },
+    {
+      "id": "2.4.3",
+      "nombre": "Orden del foco",
+      "definición": "Si se puede navegar secuencialmente, el orden del foco debe ser lógico y operativo.",
+      "beneficio": "Asegura una navegación coherente para usuarios de teclado.",
+      "implementacion": "- El foco debe seguir el orden visual lógico (izquierda a derecha, arriba a abajo generalmente).",
+      "errores": "- Usar tabindex positivo (ej. tabindex=\"1\") que altera el flujo natural.",
+      "codigo_bueno": "<a href=\"...\" tabindex=\"0\">Enlace</a>",
+      "codigo_malo": "<a href=\"...\" tabindex=\"5\">Enlace</a>"
+    },
+    {
+      "id": "2.4.4",
+      "nombre": "Propósito de los enlaces",
+      "definición": "El propósito de cada enlace debe ser claro por su texto o contexto.",
+      "beneficio": "Ayuda a usuarios a decidir si quieren seguir un enlace. Los usuarios de lectores de pantalla a menudo listan todos los enlaces de una página.",
+      "implementacion": "- Evita 'clic aquí' o 'más info'. Usa texto descriptivo.",
+      "errores": "- Múltiples enlaces que dicen 'Leer más' sin contexto.",
+      "codigo_bueno": "<a href=\"...\">Leer más sobre Accesibilidad</a>",
+      "codigo_malo": "<a href=\"...\">Leer más</a>"
+    },
+    {
+      "id": "2.5.1",
+      "nombre": "Gestos del puntero",
+      "definición": "Las acciones que requieren gestos complejos (multitáctil, dibujar) deben tener una alternativa simple (un solo toque).",
+      "beneficio": "Ayuda a personas con discapacidades motoras que no pueden realizar gestos precisos o complejos.",
+      "implementacion": "- Si usas un mapa con 'pinch-to-zoom', añade botones de + y -.",
+      "errores": "- Carruseles que solo funcionan deslizando el dedo (swipe).",
+      "codigo_bueno": "",
+      "codigo_malo": ""
+    },
+    {
+      "id": "2.5.2",
+      "nombre": "Cancelación del puntero",
+      "definición": "La acción no debe ejecutarse al presionar (down-event), sino al soltar (up-event), y debe poder cancelarse (moviendo el puntero fuera).",
+      "beneficio": "Previene activaciones accidentales por toques involuntarios o temblores.",
+      "implementacion": "- Usa eventos 'click' o 'mouseup' estándar, no 'mousedown'.",
+      "errores": "- Botones que disparan la acción apenas el dedo toca la pantalla.",
+      "codigo_bueno": "",
+      "codigo_malo": ""
+    },
+    {
+      "id": "2.5.3",
+      "nombre": "Etiqueta en el nombre",
+      "definición": "Para componentes con etiquetas visuales, el nombre accesible (programático) debe contener el texto visual.",
+      "beneficio": "Permite a usuarios de dictado por voz activar controles diciendo lo que ven.",
+      "implementacion": "- Si un botón dice 'Enviar', su aria-label no debe ser 'Botón 1', sino contener 'Enviar'.",
+      "errores": "- Botón visual 'Buscar' con aria-label='Lupa'.",
+      "codigo_bueno": "<button aria-label=\"Buscar en el sitio\">Buscar</button>",
+      "codigo_malo": "<button aria-label=\"Lupa\">Buscar</button>"
+    },
+    {
+      "id": "2.5.4",
+      "nombre": "Actuación por movimiento",
+      "definición": "Las funciones activadas por movimiento del dispositivo (agitar, inclinar) deben poder desactivarse o tener alternativa.",
+      "beneficio": "Evita activaciones accidentales si el usuario tiene el dispositivo en un soporte o tiene temblores.",
+      "implementacion": "- Botón en pantalla para realizar la misma acción que 'agitar'.",
+      "errores": "- 'Agita para reportar un error' sin otra forma de hacerlo.",
+      "codigo_bueno": "",
+      "codigo_malo": ""
+    },
+    {
+      "id": "3.1.1",
+      "nombre": "Idioma de la página",
+      "definición": "El idioma predeterminado de la página debe definirse en el código.",
+      "beneficio": "Permite que los lectores de pantalla usen la pronunciación y acento correctos.",
+      "implementacion": "- Usa el atributo 'lang' en la etiqueta <html>.",
+      "errores": "- Omitir el atributo lang o dejar el valor por defecto 'en' en una página en español.",
+      "codigo_bueno": "<html lang=\"es\">",
+      "codigo_malo": "<html> o <html lang=\"en\"> (en sitio español)"
+    },
+    {
+      "id": "3.2.1",
+      "nombre": "Al recibir foco",
+      "definición": "Cuando un componente recibe el foco, no debe iniciar un cambio de contexto (enviar form, abrir nueva ventana) automáticamente.",
+      "beneficio": "El usuario mantiene el control y no se desorienta al navegar.",
+      "implementacion": "- No uses onfocus para enviar formularios o abrir pop-ups.",
+      "errores": "- Menú desplegable que abre una página nueva apenas se navega a él con teclado.",
+      "codigo_bueno": "",
+      "codigo_malo": ""
+    },
+    {
+      "id": "3.2.2",
+      "nombre": "Al recibir entrada",
+      "definición": "Cambiar la configuración de un componente no debe causar automáticamente un cambio de contexto a menos que se avise.",
+      "beneficio": "Evita sorpresas como el envío de formularios incompletos.",
+      "implementacion": "- Usa un botón de 'Enviar' o 'Aplicar' explícito.",
+      "errores": "- Checkbox que recarga toda la página al seleccionarlo sin aviso.",
+      "codigo_bueno": "<select name=\"ir\"><option>...</option></select> <button>Ir</button>",
+      "codigo_malo": "<select onchange=\"window.location=this.value\">"
+    },
+    {
+      "id": "3.3.1",
+      "nombre": "Identificación de errores",
+      "definición": "Si ocurre un error de entrada, se identifica el ítem erróneo y se describe el error en texto.",
+      "beneficio": "Ayuda a usuarios a entender qué salió mal y cómo arreglarlo.",
+      "implementacion": "- Muestra mensajes de texto claros junto al campo erróneo.\n- Usa aria-describedby para vincular el error con el campo.",
+      "errores": "- Solo poner el borde rojo sin texto explicativo.",
+      "codigo_bueno": "<input aria-describedby=\"error-msg\">\n<span id=\"error-msg\">Correo inválido</span>",
+      "codigo_malo": ""
+    },
+    {
+      "id": "3.3.2",
+      "nombre": "Etiquetas o instrucciones",
+      "definición": "Se proporcionan etiquetas o instrucciones cuando el contenido requiere entrada del usuario.",
+      "beneficio": "Ayuda a usuarios a saber qué dato se espera (formato de fecha, obligatoriedad).",
+      "implementacion": "- Usa etiquetas <label> visibles para todos los inputs.\n- Indica formatos requeridos (ej. DD/MM/AAAA).",
+      "errores": "- Usar placeholder como única etiqueta (desaparece al escribir).",
+      "codigo_bueno": "<label for=\"fecha\">Fecha (DD/MM/AAAA):</label>\n<input id=\"fecha\">",
+      "codigo_malo": "<input placeholder=\"Fecha\">"
+    },
+    {
+      "id": "4.1.1",
+      "nombre": "Análisis (Parsing)",
+      "definición": "El código debe estar bien formado: etiquetas completas, anidadas correctamente y IDs únicos.",
+      "beneficio": "Asegura que las tecnologías de asistencia no se confundan con estructuras rotas.",
+      "implementacion": "- Valida tu HTML.\n- Asegura que cada ID en la página sea único.",
+      "errores": "- IDs duplicados (rompen la accesibilidad de formularios y ARIA).\n- Etiquetas mal cerradas.",
+      "codigo_bueno": "<div id=\"unico1\">...</div> <div id=\"unico2\">...</div>",
+      "codigo_malo": "<div id=\"duplicado\">...</div> <div id=\"duplicado\">...</div>"
+    },
+    {
+      "id": "4.1.2",
+      "nombre": "Nombre, Rol, Valor",
+      "definición": "Para componentes interactivos, el nombre, rol y valor deben poder determinarse programáticamente.",
+      "beneficio": "Permite que los lectores de pantalla sepan qué es el elemento (botón, tab), cómo se llama y su estado (abierto, seleccionado).",
+      "implementacion": "- Usa HTML semántico siempre que puedas.\n- Si usas divs personalizados, usa ARIA (role, aria-label, aria-expanded).",
+      "errores": "- Crear un botón con <div> y CSS sin añadir role=\"button\".",
+      "codigo_bueno": "<button>Cerrar</button>",
+      "codigo_malo": "<div onclick=\"cerrar()\">X</div>"
+    }
+  ],
+  "glosario": [
+    {
+      "nombre": "ARIA",
+      "definición": "Siglas de 'Accessible Rich Internet Applications'. Es un conjunto de atributos especiales (como aria-label o role) que se añaden al HTML para que los lectores de pantalla entiendan elementos complejos (ej. menús desplegables o pop-ups)."
+    },
+    {
+      "nombre": "Foco",
+      "definición": "Es el indicador visual que muestra qué elemento de la página está seleccionado actualmente, generalmente al navegar con la tecla TAB. Un buen manejo del foco es crucial para usuarios que no usan mouse."
+    },
+    {
+      "nombre": "Contraste",
+      "definición": "La diferencia de brillo y color entre el texto y su fondo. WCAG exige un ratio mínimo (ej. 4.5:1) para asegurar que personas con baja visión o daltonismo puedan leer el contenido."
+    },
+    {
+      "nombre": "Texto Alternativo",
+      "definición": "Texto que describe la función o contenido de una imagen. Es fundamental para usuarios ciegos que usan lectores de pantalla. Se implementa con el atributo 'alt' en la etiqueta <img>."
+    },
+    {
+      "nombre": "Viewport",
+      "definición": "El área visible de la página web en el dispositivo. Es importante configurarlo correctamente con la etiqueta <meta> para que el sitio sea responsive y accesible en móviles."
+    },
+    {
+      "nombre": "Lectores de pantalla",
+      "definición": "Software utilizado por personas ciegas o con baja visión que lee en voz alta el contenido que aparece en la pantalla (ej. JAWS, NVDA, VoiceOver)."
+    },
+    {
+      "nombre": "Semántica Web",
+      "definición": "El uso de etiquetas HTML que transmiten el significado y la estructura del contenido (como <header>, <article>, <table>), no solo su apariencia visual."
+    },
+    {
+      "nombre": "down-event",
+      "definición": "Evento que ocurre cuando se presiona con el puntero o se toca un objeto (mousedown, touchstart)."
+    },
+    {
+      "nombre": "up-event",
+      "definición": "Evento que ocurre cuando se deja de presionar con el puntero o se alza el dedo de la pantalla (mouseup, touchend)."
+    },
+    {
+      "nombre": "entrada",
+      "definición": "Cualquier componente donde el usuario puede introducir datos, como campos de texto, checkboxes o selectores."
+    }
+  ]
 }

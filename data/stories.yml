@@ -2,9 +2,56 @@ version: "3.1"
 
 stories:
 
-- story: Flujo de validación interactivo
+- story: Camino feliz - Navegación completa por principios
   steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: navegar_principios
+  - action: utter_ask_principle
+  - intent: consultar_criterio
+    entities:
+    - criterio_id: "principio_1"
+  - action: action_get_content
+  - intent: consultar_criterio
+    entities:
+    - criterio_id: "1.1.1"
+  - action: action_get_content
+  - intent: obtener_guia
+  - action: action_get_content  # El action debe recordar el último ID consultado
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Consulta directa de un criterio y su guía
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: consultar_criterio
+    entities:
+    - criterio_id: "1.4.1"
+  - action: action_get_content
+  - intent: obtener_guia
+  - action: action_get_content
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Validación de código rápida
+  steps:
+  - intent: greet
+  - action: utter_greet
   - intent: validar_codigo
   - action: utter_ask_validation
-  - intent: validar_codigo  # El usuario envía el código HTML
+  - intent: validar_codigo  # Usuario envía el HTML
   - action: action_validate_code
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Consulta de glosario simple
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: consultar_glosario
+    entities:
+    - criterio_id: "ARIA"
+  - action: action_get_content
+  - intent: goodbye
+  - action: utter_goodbye

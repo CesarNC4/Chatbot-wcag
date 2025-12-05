@@ -1,6 +1,6 @@
 recipe: default.v1
 assistant_id: 20251115-233045-online-envelope
-language: en
+language: es
 
 pipeline:
   - name: WhitespaceTokenizer

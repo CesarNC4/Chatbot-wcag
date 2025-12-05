@@ -20,7 +20,7 @@ intents:
 entities:
   - criterio_id
 
-# 3. RESPUESTAS (A la espera...)
+# 3. RESPUESTAS
 # Placeholders de texto y botones.
 responses:
   utter_greet:
@@ -56,7 +56,14 @@ responses:
 
   # Respuesta por defecto
   utter_default:
-    - text: "Lo siento, no entendí eso. ¿Puedes reformularlo? Puedes usar los botones para guiarte."
+    - text: "🤔 Mmm... no estoy seguro de entender eso. Intenta preguntarme de otra forma o usa el menú para guiarte:"
+      buttons:
+        - title: "🏠 Volver al Inicio"
+          payload: "/greet"
+        - title: "🧭 Navegar Principios"
+          payload: "/navegar_principios"
+        - title: "📖 Ver Glosario"
+          payload: "/consultar_glosario"
 
 # 4. ACCIONES 
 actions:

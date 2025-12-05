@@ -1,91 +1,51 @@
-#### This file contains tests to evaluate that your bot behaves as expected.
-#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+#### Tests de flujos de Accesibilidad WCAG
 
 stories:
-- story: happy path 1
+- story: Prueba de navegación por principios
   steps:
   - user: |
-      hello there!
+      hola
     intent: greet
   - action: utter_greet
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+      quiero navegar por principios
+    intent: navegar_principios
+  - action: utter_ask_principle
+  - user: |
+      ver principio 1
+    intent: consultar_criterio
+    entities:
+      - criterio_id: "principio_1"
+  - action: action_get_content
 
-- story: happy path 2
+- story: Prueba de consulta directa
   steps:
   - user: |
-      hello there!
+      buenas
     intent: greet
   - action: utter_greet
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+      háblame del criterio 1.1.1
+    intent: consultar_criterio
+    entities:
+      - criterio_id: "1.1.1"
+  - action: action_get_content
   - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
+      dame un ejemplo
+    intent: obtener_guia
+  - action: action_get_content
 
-- story: sad path 1
+- story: Prueba de validación
   steps:
   - user: |
-      hello
+      hola
     intent: greet
   - action: utter_greet
   - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+      revisa este html
+    intent: validar_codigo
+  - action: utter_ask_validation
   - user: |
-      yes
-    intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      not really
-    intent: deny
-  - action: utter_goodbye
-
-- story: sad path 3
-  steps:
-  - user: |
-      hi
-    intent: greet
-  - action: utter_greet
-  - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      no
-    intent: deny
-  - action: utter_goodbye
-
-- story: say goodbye
-  steps:
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
-
-- story: bot challenge
-  steps:
-  - user: |
-      are you a bot?
-    intent: bot_challenge
-  - action: utter_iamabot
+      <img src="foto.jpg">
+    intent: validar_codigo
+  - action: action_validate_code
